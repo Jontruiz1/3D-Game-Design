@@ -175,7 +175,7 @@ class SpriteMask;
 class SpriteRenderer; 
 class SpriteShapeRenderer; 
 class TilemapRenderer; 
-class TrailRenderer; 
+class TrailRenderer; template <> void RegisterUnityClass<TrailRenderer>(const char*);
 class VFXRenderer; 
 class Rigidbody; template <> void RegisterUnityClass<Rigidbody>(const char*);
 class Rigidbody2D; 
@@ -276,7 +276,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 89 non stripped classes
+	//Total: 90 non stripped classes
 	//0. NavMeshAgent
 	RegisterUnityClass<NavMeshAgent>("AI");
 	//1. NavMeshData
@@ -423,37 +423,39 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Texture3D>("Core");
 	//72. TimeManager
 	RegisterUnityClass<TimeManager>("Core");
-	//73. Transform
+	//73. TrailRenderer
+	RegisterUnityClass<TrailRenderer>("Core");
+	//74. Transform
 	RegisterUnityClass<Transform>("Core");
-	//74. ParticleSystem
+	//75. ParticleSystem
 	RegisterUnityClass<ParticleSystem>("ParticleSystem");
-	//75. ParticleSystemRenderer
+	//76. ParticleSystemRenderer
 	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
-	//76. BoxCollider
+	//77. BoxCollider
 	RegisterUnityClass<BoxCollider>("Physics");
-	//77. CharacterController
+	//78. CharacterController
 	RegisterUnityClass<CharacterController>("Physics");
-	//78. Collider
+	//79. Collider
 	RegisterUnityClass<Collider>("Physics");
-	//79. MeshCollider
+	//80. MeshCollider
 	RegisterUnityClass<MeshCollider>("Physics");
-	//80. PhysicsManager
+	//81. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//81. Rigidbody
+	//82. Rigidbody
 	RegisterUnityClass<Rigidbody>("Physics");
-	//82. SphereCollider
+	//83. SphereCollider
 	RegisterUnityClass<SphereCollider>("Physics");
-	//83. Terrain
+	//84. Terrain
 	RegisterUnityClass<Terrain>("Terrain");
-	//84. TerrainData
+	//85. TerrainData
 	RegisterUnityClass<TerrainData>("Terrain");
-	//85. TextRendering::Font
+	//86. TextRendering::Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//86. UI::Canvas
+	//87. UI::Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//87. UI::CanvasGroup
+	//88. UI::CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//88. UI::CanvasRenderer
+	//89. UI::CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
 
 }

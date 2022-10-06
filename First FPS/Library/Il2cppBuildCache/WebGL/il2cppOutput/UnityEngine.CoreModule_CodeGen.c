@@ -7251,15 +7251,15 @@ static const Il2CppTokenRangePair s_rgctxIndices[64] =
 {
 	{ 0x0200001E, { 0, 7 } },
 	{ 0x0200001F, { 7, 4 } },
-	{ 0x020000F9, { 87, 7 } },
-	{ 0x020000FA, { 94, 7 } },
-	{ 0x020000FB, { 101, 9 } },
-	{ 0x020000FC, { 110, 11 } },
-	{ 0x020000FD, { 121, 3 } },
-	{ 0x02000106, { 124, 8 } },
-	{ 0x02000108, { 132, 4 } },
-	{ 0x0200010A, { 136, 9 } },
-	{ 0x0200010C, { 145, 6 } },
+	{ 0x020000FA, { 87, 7 } },
+	{ 0x020000FB, { 94, 7 } },
+	{ 0x020000FC, { 101, 9 } },
+	{ 0x020000FD, { 110, 11 } },
+	{ 0x020000FE, { 121, 3 } },
+	{ 0x02000107, { 124, 8 } },
+	{ 0x02000109, { 132, 4 } },
+	{ 0x0200010B, { 136, 9 } },
+	{ 0x0200010D, { 145, 6 } },
 	{ 0x0600002A, { 11, 1 } },
 	{ 0x0600002B, { 12, 1 } },
 	{ 0x06000189, { 13, 2 } },
@@ -7473,7 +7473,6 @@ extern const CustomAttributesCacheGenerator g_UnityEngine_CoreModule_AttributeGe
 static TypeDefinitionIndex s_staticConstructorsToRunAtStartup[10] = 
 {
 	1487,
-	1622,
 	1623,
 	1624,
 	1625,
@@ -7481,6 +7480,7 @@ static TypeDefinitionIndex s_staticConstructorsToRunAtStartup[10] =
 	1627,
 	1628,
 	1629,
+	1630,
 	0,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_CoreModule_CodeGenModule;
