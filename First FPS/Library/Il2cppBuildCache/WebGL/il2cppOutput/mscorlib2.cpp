@@ -17784,6 +17784,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2
 		return L_2;
 	}
 }
+// System.Void System.Console::WriteLine(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Console_WriteLine_m733D5881D35DC9AA41B65ABCA22CC8BF7274EB0E (String_t* ___value0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Console_t79987B1B5914E76054A8CBE506B9E11936A8BC07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Console_t79987B1B5914E76054A8CBE506B9E11936A8BC07_il2cpp_TypeInfo_var);
+		TextWriter_t4CB195237F3B6CADD850FBC3604A049C7C564643 * L_0 = ((Console_t79987B1B5914E76054A8CBE506B9E11936A8BC07_StaticFields*)il2cpp_codegen_static_fields_for(Console_t79987B1B5914E76054A8CBE506B9E11936A8BC07_il2cpp_TypeInfo_var))->get_stdout_0();
+		String_t* L_1 = ___value0;
+		VirtActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_0, L_1);
+		return;
+	}
+}
 // System.Text.Encoding System.Console::get_InputEncoding()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_tE901442411E2E70039D2A4AE77FB81C3D6064827 * Console_get_InputEncoding_m637B46AD9CD800909A133D63107D429A0F2076CF (const RuntimeMethod* method)
 {

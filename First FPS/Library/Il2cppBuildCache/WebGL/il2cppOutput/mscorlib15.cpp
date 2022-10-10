@@ -27808,7 +27808,7 @@ IL_006d:
 		Type_t * L_19 = ((Converter_t731F4A747D9F210BB63F96DB43AA8CAB20342E03_StaticFields*)il2cpp_codegen_static_fields_for(Converter_t731F4A747D9F210BB63F96DB43AA8CAB20342E03_il2cpp_TypeInfo_var))->get_typeofISerializable_6();
 		Type_t * L_20 = ___objectType0;
 		bool L_21;
-		L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(103 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_19, L_20);
+		L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(104 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_19, L_20);
 		if (!L_21)
 		{
 			goto IL_00bd;

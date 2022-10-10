@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Microgame.Tutorials",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fps.Editor", "fps.Editor.csproj", "{35F7067B-DCC8-7AA9-28A0-ACD5EA3E178A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{2170BCC5-4326-5593-1275-4F6AABBC5D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{35F7067B-DCC8-7AA9-28A0-ACD5EA3E178A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35F7067B-DCC8-7AA9-28A0-ACD5EA3E178A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35F7067B-DCC8-7AA9-28A0-ACD5EA3E178A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2170BCC5-4326-5593-1275-4F6AABBC5D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2170BCC5-4326-5593-1275-4F6AABBC5D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2170BCC5-4326-5593-1275-4F6AABBC5D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2170BCC5-4326-5593-1275-4F6AABBC5D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

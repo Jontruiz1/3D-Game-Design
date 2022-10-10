@@ -28,6 +28,8 @@ namespace Unity.FPS.Game
         public string LoseSceneName = "LoseScene";
 
 
+        private float timeElapsed;
+
         public bool GameIsEnding { get; private set; }
 
         float m_TimeLoadEndGameScene;
@@ -60,6 +62,9 @@ namespace Unity.FPS.Game
                     GameIsEnding = false;
                 }
             }
+
+
+
         }
 
         void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);

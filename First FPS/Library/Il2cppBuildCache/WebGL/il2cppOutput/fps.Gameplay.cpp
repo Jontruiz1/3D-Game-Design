@@ -8906,12 +8906,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectiveKillEnemies_OnEnemyKilled_m1D96
 	String_t* G_B13_0 = NULL;
 	String_t* G_B17_0 = NULL;
 	{
+		// if(m_KillTotal == 3)
+		int32_t L_0 = __this->get_m_KillTotal_14();
 		// if (IsCompleted)
-		bool L_0;
-		L_0 = Objective_get_IsCompleted_mDB845565F56951580F97CCE9DB7C13E231295DD8_inline(__this, /*hidden argument*/NULL);
-		if (!L_0)
+		bool L_1;
+		L_1 = Objective_get_IsCompleted_mDB845565F56951580F97CCE9DB7C13E231295DD8_inline(__this, /*hidden argument*/NULL);
+		if (!L_1)
 		{
-			goto IL_0009;
+			goto IL_0012;
 		}
 	}
 	{
@@ -8919,152 +8921,152 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectiveKillEnemies_OnEnemyKilled_m1D96
 		return;
 	}
 
-IL_0009:
+IL_0012:
 	{
 		// m_KillTotal++;
-		int32_t L_1 = __this->get_m_KillTotal_14();
-		__this->set_m_KillTotal_14(((int32_t)il2cpp_codegen_add((int32_t)L_1, (int32_t)1)));
+		int32_t L_2 = __this->get_m_KillTotal_14();
+		__this->set_m_KillTotal_14(((int32_t)il2cpp_codegen_add((int32_t)L_2, (int32_t)1)));
 		// if (MustKillAllEnemies)
-		bool L_2 = __this->get_MustKillAllEnemies_11();
-		if (!L_2)
+		bool L_3 = __this->get_MustKillAllEnemies_11();
+		if (!L_3)
 		{
-			goto IL_0032;
+			goto IL_003b;
 		}
 	}
 	{
 		// KillsToCompleteObjective = evt.RemainingEnemyCount + m_KillTotal;
-		EnemyKillEvent_t55DB65D83947730AA33243A31576026BE31E0FE5 * L_3 = ___evt0;
-		int32_t L_4 = L_3->get_RemainingEnemyCount_1();
-		int32_t L_5 = __this->get_m_KillTotal_14();
-		__this->set_KillsToCompleteObjective_12(((int32_t)il2cpp_codegen_add((int32_t)L_4, (int32_t)L_5)));
+		EnemyKillEvent_t55DB65D83947730AA33243A31576026BE31E0FE5 * L_4 = ___evt0;
+		int32_t L_5 = L_4->get_RemainingEnemyCount_1();
+		int32_t L_6 = __this->get_m_KillTotal_14();
+		__this->set_KillsToCompleteObjective_12(((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)L_6)));
 	}
 
-IL_0032:
+IL_003b:
 	{
 		// int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
-		bool L_6 = __this->get_MustKillAllEnemies_11();
-		if (L_6)
+		bool L_7 = __this->get_MustKillAllEnemies_11();
+		if (L_7)
 		{
-			goto IL_0049;
+			goto IL_0052;
 		}
 	}
 	{
-		int32_t L_7 = __this->get_KillsToCompleteObjective_12();
-		int32_t L_8 = __this->get_m_KillTotal_14();
-		G_B7_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_7, (int32_t)L_8));
-		goto IL_004f;
+		int32_t L_8 = __this->get_KillsToCompleteObjective_12();
+		int32_t L_9 = __this->get_m_KillTotal_14();
+		G_B7_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_8, (int32_t)L_9));
+		goto IL_0058;
 	}
 
-IL_0049:
+IL_0052:
 	{
-		EnemyKillEvent_t55DB65D83947730AA33243A31576026BE31E0FE5 * L_9 = ___evt0;
-		int32_t L_10 = L_9->get_RemainingEnemyCount_1();
-		G_B7_0 = L_10;
+		EnemyKillEvent_t55DB65D83947730AA33243A31576026BE31E0FE5 * L_10 = ___evt0;
+		int32_t L_11 = L_10->get_RemainingEnemyCount_1();
+		G_B7_0 = L_11;
 	}
 
-IL_004f:
+IL_0058:
 	{
 		V_0 = G_B7_0;
 		// if (targetRemaining == 0)
-		int32_t L_11 = V_0;
-		if (L_11)
+		int32_t L_12 = V_0;
+		if (L_12)
 		{
-			goto IL_0075;
+			goto IL_007e;
 		}
 	}
 	{
 		// CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
-		String_t* L_12 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		String_t* L_13;
-		L_13 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
-		String_t* L_14 = ((Objective_t881B7A82C3931A37A072A39A219D270F87627045 *)__this)->get_Title_4();
-		String_t* L_15;
-		L_15 = String_Concat_m10758B01687A2181C8727AD9FD9CCF5325C61C2A(_stringLiteral9A56F64D0A9D02802617C7730D3034A508D9C958, L_14, /*hidden argument*/NULL);
-		Objective_CompleteObjective_m6616098178DFD5CEE1EDAC97286751219C66F50E(__this, L_12, L_13, L_15, /*hidden argument*/NULL);
+		String_t* L_13 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		String_t* L_14;
+		L_14 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
+		String_t* L_15 = ((Objective_t881B7A82C3931A37A072A39A219D270F87627045 *)__this)->get_Title_4();
+		String_t* L_16;
+		L_16 = String_Concat_m10758B01687A2181C8727AD9FD9CCF5325C61C2A(_stringLiteral9A56F64D0A9D02802617C7730D3034A508D9C958, L_15, /*hidden argument*/NULL);
+		Objective_CompleteObjective_m6616098178DFD5CEE1EDAC97286751219C66F50E(__this, L_13, L_14, L_16, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 
-IL_0075:
+IL_007e:
 	{
 		// else if (targetRemaining == 1)
-		int32_t L_16 = V_0;
-		if ((!(((uint32_t)L_16) == ((uint32_t)1))))
+		int32_t L_17 = V_0;
+		if ((!(((uint32_t)L_17) == ((uint32_t)1))))
 		{
-			goto IL_00a2;
+			goto IL_00ab;
 		}
 	}
 	{
 		// string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
 		//     ? "One enemy left"
 		//     : string.Empty;
-		int32_t L_17 = __this->get_NotificationEnemiesRemainingThreshold_13();
-		int32_t L_18 = V_0;
-		if ((((int32_t)L_17) >= ((int32_t)L_18)))
+		int32_t L_18 = __this->get_NotificationEnemiesRemainingThreshold_13();
+		int32_t L_19 = V_0;
+		if ((((int32_t)L_18) >= ((int32_t)L_19)))
 		{
-			goto IL_0089;
+			goto IL_0092;
 		}
 	}
 	{
-		String_t* L_19 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		G_B13_0 = L_19;
-		goto IL_008e;
+		String_t* L_20 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		G_B13_0 = L_20;
+		goto IL_0097;
 	}
 
-IL_0089:
+IL_0092:
 	{
 		G_B13_0 = _stringLiteral95973C13A66ACA86E90B0ECC0CA7C23B438FCE78;
 	}
 
-IL_008e:
+IL_0097:
 	{
 		V_1 = G_B13_0;
 		// UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
-		String_t* L_20 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		String_t* L_21;
-		L_21 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
-		String_t* L_22 = V_1;
-		Objective_UpdateObjective_mE0D75FCA62580190121F5A4E2114D6854FD73DC4(__this, L_20, L_21, L_22, /*hidden argument*/NULL);
+		String_t* L_21 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		String_t* L_22;
+		L_22 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
+		String_t* L_23 = V_1;
+		Objective_UpdateObjective_mE0D75FCA62580190121F5A4E2114D6854FD73DC4(__this, L_21, L_22, L_23, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 
-IL_00a2:
+IL_00ab:
 	{
 		// string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
 		//     ? targetRemaining + " enemies to kill left"
 		//     : string.Empty;
-		int32_t L_23 = __this->get_NotificationEnemiesRemainingThreshold_13();
-		int32_t L_24 = V_0;
-		if ((((int32_t)L_23) >= ((int32_t)L_24)))
+		int32_t L_24 = __this->get_NotificationEnemiesRemainingThreshold_13();
+		int32_t L_25 = V_0;
+		if ((((int32_t)L_24) >= ((int32_t)L_25)))
 		{
-			goto IL_00b2;
+			goto IL_00bb;
 		}
 	}
 	{
-		String_t* L_25 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		G_B17_0 = L_25;
-		goto IL_00c3;
+		String_t* L_26 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		G_B17_0 = L_26;
+		goto IL_00cc;
 	}
 
-IL_00b2:
+IL_00bb:
 	{
-		String_t* L_26;
-		L_26 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_0), /*hidden argument*/NULL);
 		String_t* L_27;
-		L_27 = String_Concat_m10758B01687A2181C8727AD9FD9CCF5325C61C2A(L_26, _stringLiteral449DB811E12070DFD88CDEFEB1DEDBA167FB5699, /*hidden argument*/NULL);
-		G_B17_0 = L_27;
+		L_27 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_0), /*hidden argument*/NULL);
+		String_t* L_28;
+		L_28 = String_Concat_m10758B01687A2181C8727AD9FD9CCF5325C61C2A(L_27, _stringLiteral449DB811E12070DFD88CDEFEB1DEDBA167FB5699, /*hidden argument*/NULL);
+		G_B17_0 = L_28;
 	}
 
-IL_00c3:
+IL_00cc:
 	{
 		V_2 = G_B17_0;
 		// UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
-		String_t* L_28 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		String_t* L_29;
-		L_29 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
-		String_t* L_30 = V_2;
-		Objective_UpdateObjective_mE0D75FCA62580190121F5A4E2114D6854FD73DC4(__this, L_28, L_29, L_30, /*hidden argument*/NULL);
+		String_t* L_29 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		String_t* L_30;
+		L_30 = ObjectiveKillEnemies_GetUpdatedCounterAmount_m7B193DEA60E3DA40185C02DD23D95A87D3C8A457(__this, /*hidden argument*/NULL);
+		String_t* L_31 = V_2;
+		Objective_UpdateObjective_mE0D75FCA62580190121F5A4E2114D6854FD73DC4(__this, L_29, L_30, L_31, /*hidden argument*/NULL);
 		// }
 		return;
 	}
